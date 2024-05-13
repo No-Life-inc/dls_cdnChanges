@@ -1,0 +1,8 @@
+.gitignore
+.idea
+test.py
+package-lock.json
+package.json
+readme.md
+js
+.env

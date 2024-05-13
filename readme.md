@@ -9,24 +9,25 @@
 
 ## General Use
 
-What are the main use cases for the project? <br>
-How is the code located in the repository used? <br>
-- PLACEHOLDER: VALUE.
+This repo is subscribing to new images that needs to be placed into the CDN server
 
 ## Environment Variables
 
 Create a .env in the root folder.
 
-- PLACEHOLDER=VALUE
+- RABBITUSER=user
+- RABBITPW=password
+- RABBITURL=localhost
 
 ## How To Run
 
 Make sure the environment variables are set.<br>
-More Steps.<br>
+Poetry install<br>
+Poetry shell<br>
 Lastly, use the following command:
 
 ```bash
-run PLACEHOLDER
+python subscriber.py
 ```
 
 ## Dependencies
