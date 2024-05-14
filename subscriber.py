@@ -37,6 +37,10 @@ def on_message(channel, method_frame, header_frame, body):
 
 connection = pika.BlockingConnection(pika.URLParameters(RABBITMQ_URL))
 channel = connection.channel()
+
+# Declare the queue to ensure it exists
+channel.queue_declare(queue=RABBITMQ_NEW_IMAGE_QUEUE, durable=True)
+
 channel.basic_consume(RABBITMQ_NEW_IMAGE_QUEUE, on_message)
 print(f'Starting to consume messages from the "{RABBITMQ_NEW_IMAGE_QUEUE}" queue')
 channel.start_consuming()
